@@ -38,7 +38,7 @@ function addStyleClasses(el, classes) {
     });
 }
 
-function capitalizeName(name, seperator) {
+function capitalizeName(name, seperator = "-") {
     
     const nameArray = name.split(seperator);
     console.log(nameArray);
@@ -57,10 +57,34 @@ function capitalizeName(name, seperator) {
     return newName;
 }
 
+function createProductsHTML(products, productsContainer) {
+    productsContainer.innerHTML =  products.map((product) => 
+        `
+            <div data-id = "${product.id}" class = "product main-shadow cursor-pointer p-20 bg-white b-6 d-flex flex-column gap-10 align-center ${product.category} all">
+                <div class = "image center-flex"> 
+                    <img src = "${product.thumbnail}" />
+                </div>
+                <h3 class = "center-flex">${product.title}</h3>
+                <div class = "info row">    
+                    <span class = "price">$${product.price}</span>
+                    <span class = "rating">${product.rating}</span>
+                </div>
+            </div>
+        `
+).join("");
+
+    document.querySelectorAll(".product").forEach(product=> {
+        product.addEventListener("click", ()=> {
+            window.location.href = `./product.html?id=${product.getAttribute("data-id")}`;
+        });
+    });
+}
+
 export {
     createHtmlElement,
     addTextToElement,
     navLinks,
     addStyleClasses,
-    capitalizeName
+    capitalizeName,
+    createProductsHTML
 }

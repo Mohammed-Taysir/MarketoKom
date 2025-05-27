@@ -1,4 +1,5 @@
-
+import {createHtmlElement,
+    capitalizeName,} from "./module.js";
 main();
 function main () {
     if(document.querySelector(".products-title span"))
@@ -45,26 +46,36 @@ function filteringProducts() {
 }
 
 async function getCategoryProducts(category) {
-    const {data} = await axios.get(`https://dummyjson.com/products/category/${category}`);
-    createProductsHtml(data.products);
+    try {
+        const {data} = await axios.get(`https://dummyjson.com/products/category/${category}`);
+        const productsContainer = document.querySelector(".products-content");
+        createProductsHtml(data.products, productsContainer);
+    }catch(error) {
+        console.log(error);
+    }
 }
 
 async function getProducts() {
     try {
         const {data} = await axios.get("https://dummyjson.com/products");
         const products = data["products"];
-        createProductsHtml(products)
-    }catch(e) {
-        console.log(e);
+        const productContainer = document.querySelector(".products-content"); 
+        createProductsHtml(products, productContainer);
+    }catch(error) {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            footer: '<a href="#">Why do I have this issue?</a>'
+        });
+    }finally {
+        document.querySelector(".loader-container").classList.add("d-none");
     }
 }
 
 
-
-
-export function createProductsHtml(products) {
-    const productsContent = document.querySelector(".products-content");    
-    productsContent.innerHTML =  products.map((product) => 
+function createProductsHtml(products, productContainer) {  
+    productContainer.innerHTML =  products.map((product) => 
         `
             <div data-id = "${product.id}" class = "product main-shadow cursor-pointer p-20 bg-white b-6 d-flex flex-column gap-10 align-center ${product.category} all">
                 <div class = "image center-flex"> 

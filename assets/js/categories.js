@@ -1,11 +1,25 @@
+// import { capitalizeName } from "./module";
+
+import{capitalizeName} from "./module.js";
 
 function main() {
     getCategories();
 }
 
 async function getCategories() {
-    const {data} = await axios.get("https://dummyjson.com/products/category-list");
-    createCategories(data);
+    try {
+        const {data} = await axios.get("https://dummyjson.com/products/category-list");
+        createCategories(data);
+    }catch(error) {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            footer: '<a href="#">Why do I have this issue?</a>'
+        });
+    }finally {
+        document.querySelector(".loader-container").classList.add("d-none");
+    }
 }
 
 

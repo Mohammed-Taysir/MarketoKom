@@ -1,5 +1,6 @@
 
 
+main();
 function main() {
     getProductDetails(getParams());
 }
@@ -13,10 +14,17 @@ function getParams() {
 async function getProductDetails(productId) {
     try{
         const {data} = await axios.get(`https://dummyjson.com/products/${productId}`);
-        makeProduct(data);
         console.log(data);
+        makeProduct(data);
     }catch(error) {
-        console.log(error)
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            footer: '<a href="#">Why do I have this issue?</a>'
+        });
+    }finally {
+        document.querySelector(".loader-container").classList.add("d-none");
     }
 }
 
@@ -48,6 +56,7 @@ function productSmallImgs(product) {
 
 function getProductTitle(product) {
     document.querySelector(".details .product-title").textContent = product.title;
+    document.title = product.title;
 }
 
 function getPriceAndRating(product) {
@@ -66,4 +75,3 @@ function createImg(parent, src) {
     parent.appendChild(img);
 }
 
-main();

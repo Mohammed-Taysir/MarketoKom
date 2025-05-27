@@ -14,6 +14,10 @@ ul {
 
 /* Box Style  */
 
+.d-none {
+    display: none !important;
+}
+
 .d-grid {
     display: grid;
 }
@@ -95,10 +99,27 @@ ul {
 }
 
 
+/* Position  */
+
+.p-absolute {
+    position: absolute;
+}
+
+.p-fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
 /* Widths  */
 
 .full-width {
     width: 100%;
+}
+
+.full-height {
+    height: 100vh;
 }
 
 /* Colors  */
