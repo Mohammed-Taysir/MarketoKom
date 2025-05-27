@@ -1,6 +1,4 @@
-// import { capitalizeName } from "./module";
 
-import{capitalizeName} from "./module.js";
 
 function main() {
     getCategories();
