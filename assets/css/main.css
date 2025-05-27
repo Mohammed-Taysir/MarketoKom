@@ -1,0 +1,189 @@
+
+:root {
+    --bodyColor: #F9FAFB;
+    --mainColor: #111827;
+    --buttonsColor: #2563EB;
+    --hoverColor: #1E40AF;
+    --mainTransition: 0.3s;
+    --mainShadow: 0 8px 16px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.05);
+
+}
+
+body {
+    font-family: "Playpen Sans Deva", cursive;
+    background-color: var(--bodyColor);
+}
+
+.container {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    padding: 25px 0;
+    /* position: sticky;
+    top: 0;
+    left: 0; */
+}
+
+.logo {
+    font-family: "Glass Antiqua", cursive;
+    color: var(--mainColor);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav a {
+    color: var(--mainColor);
+    transition: var(--mainTransition);
+}
+
+nav a:hover {
+    color: #1E40AF
+}
+
+/* Category Page  */
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.categories {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+
+
+.category {
+    background-color: white;
+    height: 150px;
+    cursor: pointer;
+}
+
+
+i {
+    font-size: 35px;
+}
+
+/* Products  */
+
+.side-bar {
+    width: 250px;
+}
+
+.content {
+    flex: 1;
+}
+
+.products-title {
+    color: #333;
+}
+
+.products-content {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+
+.products-content img {
+    max-width: 100%;
+    width: 150px;
+    height: 150px;
+}
+
+
+.products-content .product h3 {
+    font-size: 15px;
+    color: #888;
+}
+
+.products-content .price {
+    color: #219381;
+}
+
+.rating {
+    color: rgba(55, 128, 30);
+}
+
+/* Product Page  */
+
+.product-details .image img {
+    max-width: 100%;
+}
+
+@media(max-width: 992px) {
+    .product-details {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.small-imgs {
+    width: 130px;
+    height: 130px;
+}
+
+.product-title {
+    color: #555;
+}
+.add-button {
+    background-color: #777;
+    padding: 15px 30px;
+    font-size: 16px;
+}
+
+.product-page .details {
+    width: 40%;
+    align-items: flex-start;
+}
+
+@media(max-width: 992px) {
+    .product-page .details {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+.product-page .details .price-rating {
+    gap: 50px;
+}
+
+
+.product-description {
+    line-height: 1.9;
+    color: #777;
+}
+
+@media(max-width: 992px) {
+    .product-description {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+/* Home Page  */
+
+.home-page .hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.home-page .hero h1 {
+    font-size: 40px;
+}
+
+.home-page .hero p {
+    color: #777;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.home-page .shop-btn {
+    background-color: #333;
+    padding: 15px 30px;
+    color: white;
+}

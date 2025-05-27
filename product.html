@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Playpen+Sans+Deva:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+<body>
+    <div class="product-page">
+        <h2 class = "p-20">Product Details</h2>
+        <div class="product-details d-flex gap-20 align-center">
+            <div class="image">
+                <div class="small-imgs d-flex gap-10"></div>
+            </div>
+            <div class="details d-flex flex-column gap-20">
+                <h3 class = "product-title"></h3>
+                <div class="price-rating row">
+                    <span class = "price">$<span></span></span>
+                    <span class = "rating"></span>
+                </div>
+                <p class = "product-description"></p>
+                 <button class = "c-white f-bold b-15 add-button btn">Add To Cart</button>
+            </div>
+           
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type = "module" src = "./assets/js/header.js"></script>
+    <!-- <script type = "module" src = "./assets/js/module.js"></script> -->
+
+    <script type = "module" src = "./assets/js/product.js"></script>
+</body>
+</html>

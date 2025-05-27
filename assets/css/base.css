@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Box Style  */
+
+.d-grid {
+    display: grid;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.center-align {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.gap-5 {
+    gap: 5px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.gap-30 {
+    gap: 30px;
+}
+
+.gap-35 {
+    gap: 35px;
+}
+
+/* Aligning  */
+
+.txt-c {
+    text-align: center;
+}
+
+/* Fonts  */
+
+.f-bold {
+    font-weight: bold;
+}
+
+/* Borders  */
+
+.b-none {
+    border: none;
+}
+
+.b-6 {
+    border-radius: 6px;
+}
+
+.b-8 {
+    border-radius: 8px;
+}
+
+.b-15 {
+    border-radius: 15px;
+}
+
+/* Paddings And Margins  */
+
+.p-10 {
+    padding: 10px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+
+/* Widths  */
+
+.full-width {
+    width: 100%;
+}
+
+/* Colors  */
+
+.c-main {
+    color: var(--mainColor);
+}
+
+.c-white {
+    color: white;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+
+/* Shadows  */
+
+.main-shadow {
+    box-shadow: var(--mainShadow);
+}
+
+/* Components  */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Media  */
+
+

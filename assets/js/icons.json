@@ -1,0 +1,22 @@
+{
+  "smartphones": "fas fa-mobile-alt",
+  "laptops": "fas fa-laptop",
+  "fragrances": "fas fa-spray-can",
+  "skincare": "fas fa-heart",
+  "groceries": "fas fa-shopping-basket",
+  "home-decoration": "fas fa-couch",
+  "furniture": "fas fa-chair",
+  "tops": "fas fa-tshirt",
+  "womens-dresses": "fas fa-female",
+  "womens-shoes": "fas fa-shoe-prints",
+  "mens-shirts": "fas fa-user-tie",
+  "mens-shoes": "fas fa-shoe-prints",
+  "mens-watches": "fas fa-stopwatch",
+  "womens-watches": "fas fa-stopwatch",
+  "womens-bags": "fas fa-shopping-bag",
+  "womens-jewellery": "fas fa-gem",
+  "sunglasses": "fas fa-sunglasses",
+  "automotive": "fas fa-car",
+  "motorcycle": "fas fa-motorcycle",
+  "lighting": "fas fa-lightbulb"
+}
