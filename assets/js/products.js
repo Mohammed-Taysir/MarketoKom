@@ -21,7 +21,7 @@ async function getCategories() {
 }
 
 async function createFilterSide(categories) {
-    const sideBar = document.querySelector(".side-bar");
+    const sideBar = document.querySelector(".side-bar .side-container");
     sideBar.innerHTML += categories.map((category) => `
         <div class = "d-flex gap-10" data-cat = "${category}">
             <input id = "${category}" type = "radio" name = "category" value = "${category}" />
@@ -41,6 +41,7 @@ function filteringProducts() {
                 getCategoryProducts(e.target.value);
             }
             document.querySelector(".products-title span").textContent = capitalizeName(e.target.value, "-");
+            document.querySelector(".side-bar").classList.add("hide-mobile");
         })
     });
 }

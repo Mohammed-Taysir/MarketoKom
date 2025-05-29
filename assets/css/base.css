@@ -88,6 +88,10 @@ ul {
     border-radius: 15px;
 }
 
+.b-circle{
+    border-radius: 50%;
+}
+
 /* Paddings And Margins  */
 
 .p-10 {
@@ -157,6 +161,10 @@ ul {
     align-items: center;
 }
 
+.center-y {
+    top: 50%;
+    transform: translateY(50%);
+}
 
 .cursor-pointer {
     cursor: pointer;
@@ -169,5 +177,31 @@ ul {
 
 
 /* Media  */
+
+@media(max-width: 768px) {
+    .full-screen {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        min-height: 100vh;
+        background-color: var(--menuColor);
+        color: white;
+        overflow-y: auto;
+    }
+}
+
+@media(max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+        transition: var(--mainTransition);
+    }
+}
+
+@media(max-width: 768px) {
+    .show-mobile-flex {
+        display: flex !important; 
+    }
+}
 
 

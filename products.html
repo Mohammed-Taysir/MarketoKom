@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Playpen+Sans+Deva:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
@@ -17,11 +18,16 @@
         </div>
     </div>
     <div class="page d-flex">
-        <div class="side-bar p-10 main-shadow">
-            <div class = "d-flex gap-10 all">
+        <i class="fa-solid fa-bars show-mobile-flex p-absolute center-y d-none b-circle btn center-flex side-toggle"></i>
+        <div class="side-bar hide-mobile p-10 main-shadow">
+           
+           <div class="side-container">
+             <i class="fa-solid fa-xmark center-flex b-circle p-absolute close-button btn"></i>
+             <div class = "d-flex gap-10 all">
                 <input id = "all" type = "radio" name = "category" value = "all" checked />
                 <label for = "all">All</label>
             </div>
+           </div>
         </div>
         <div class="content">
             <h2 class = "products-title txt-c"><span></span> Products</h2>
@@ -35,7 +41,7 @@
 
     <script type = "module" src = "./assets/js/header.js"></script>
     <script type = "module" src = "./assets/js/module.js"></script>
-
+    <script src = "./assets/js/handleBars.js"></script>
     <script type = "module" src = "./assets/js/products.js"></script>
 </body>
 </html>

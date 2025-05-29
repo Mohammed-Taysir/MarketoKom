@@ -6,7 +6,7 @@
     --hoverColor: #1E40AF;
     --mainTransition: 0.3s;
     --mainShadow: 0 8px 16px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.05);
-
+    --menuColor: #333;
 }
 
 body {
@@ -63,14 +63,44 @@ h2 {
 }
 
 
-i {
-    font-size: 35px;
-}
-
 /* Products  */
 
 .side-bar {
     width: 250px;
+}
+
+@media(max-width: 768px) {
+    .side-bar {
+        width: 100%;
+    }
+}
+
+.side-toggle {
+    font-weight: 900;
+    font-size: 20px;
+    color: #666;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    left: 5px;
+}
+
+.close-button {
+    width: 35px;
+    height: 35px;
+    background-color: red;
+    font-size: 20px;
+    color: white;
+    
+}
+
+@media(max-width: 768px) {
+    .close-button {
+        top: 5px;
+        right: 5px;
+        z-index: 9999;
+    }
 }
 
 .content {
