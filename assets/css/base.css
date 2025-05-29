@@ -204,4 +204,10 @@ ul {
     }
 }
 
+@media(min-width: 768px) {
+    .hide-desctop {
+        display: none;
+    }
+}
+
 
