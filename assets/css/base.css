@@ -102,8 +102,17 @@ ul {
     padding: 20px;
 }
 
+.mt-20 {
+    margin-top: 20px;
+}
 
+.mb-20 {
+    margin-bottom: 20px;
+}
 /* Position  */
+.p-relative {
+    position: relative;
+}
 
 .p-absolute {
     position: absolute;
@@ -175,6 +184,14 @@ ul {
     cursor: pointer;
 }
 
+.prevented {
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.cursor-not {
+    cursor: not-allowed;
+}
 
 /* Media  */
 
@@ -188,6 +205,7 @@ ul {
         background-color: var(--menuColor);
         color: white;
         overflow-y: auto;
+        z-index: 999;
     }
 }
 
